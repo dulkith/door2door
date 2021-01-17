@@ -132,8 +132,6 @@
                     <a id="ProdSpecialOff" href="#offeropop" onclick="" data-rel="popup" data-transition="pop">
                         <h6 style="color: #f72855;text-align: right">Enter code here</h6>
                     </a>
-
-                    </a>
                     <h5 id="prodSumAmount" style="color: #010201;font-weight: bold;text-align: right">LKR 260.00
                     </h5>
                 </div>
@@ -270,7 +268,7 @@
                 var millisecondsToWait = 2000;
                 setTimeout(function () {
                     $.ajax({
-                        url: "http://localhost:9002/Door 2 Door/product/" + product_id
+                        url: "http://localhost/door2door/buyer_item.php?itemId=" + product_id
                     }).then(function (data) {
                         console.log(data);
                         if (data.status === "success") {

@@ -1,4 +1,3 @@
-
 <?php include 'header.php'; ?>
 
 <div id="sideNavigation" class="sideNavigation" onclick="navClose()">
@@ -10,7 +9,7 @@
 
 <div data-role="header" data-position="fixed" class="header-bar">
     <i class="fa fa-bars fa-2x back-icon" onclick="navOpen()"></i>
-    <i class="fa fa-chevron-left previous"></i>
+    <i class="fa fa-chevron-left previous" onclick="goBack()"></i>
     <h1 style="font-size: 20px; font-weight: 900;" class="page-detail">LEVEL UP</h1>
 </div>
 
@@ -38,4 +37,3 @@
 
 </script>
 <?php include 'footer.php'; ?>
-

@@ -19,15 +19,17 @@ function initMap() {
     });
 
     //Code for the marker
+    const image =
+    "https://i.imgur.com/jwkqUZt.png";
     let marker = new google.maps.Marker({
         position: place,
-        icon:'../assets/images/StoreMap/restaurant.png',
+        icon: image,
         animation: google.maps.Animation.BOUNCE,
         map: map
     });
 
     var infowindow = new google.maps.InfoWindow({
-        content: "This is the location of Trendy Fashion Store!"
+        content: "This is the location of Chills Food!"
     });
 
     google.maps.event.addListener(marker, 'click', function () {
@@ -35,6 +37,3 @@ function initMap() {
     });
 }
 
-function goToProduct() {
-    document.location.href = "./product.html";
-}

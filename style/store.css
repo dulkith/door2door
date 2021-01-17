@@ -10,6 +10,14 @@ div.scrollmenu {
     overflow: auto;
 }
 
+div.scrollmenu-foodmenu {
+    overflow: auto;
+}
+
+div.scrollmenu-playList {
+    overflow: auto;
+}
+
 div.scrollmenu a {
     display: inline-block;
     color: white;
@@ -18,8 +26,48 @@ div.scrollmenu a {
     text-decoration: none;
 }
 
+div.scrollmenu-playList a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.playlist {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+div.scrollmenu-foodmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+
 div.scrollmenu a:hover {
     background-color: rgb(255, 255, 255);
+}
+
+.btTxt {
+    height: 130px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-right: 10px;
+}
+
+.center-videoheading {
+    position: absolute;
+    top: 3%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    text-shadow: none;
 }
 
 .carosol-today-deal {
@@ -32,6 +80,9 @@ div.scrollmenu a:hover {
     height: 225px;
     border: 1px solid rgb(232, 76, 79) !important;
     background-color: white;
+    border-radius: 10px;
+    margin-right: 15px;
+   
 }
 
 .card-image {
@@ -57,8 +108,9 @@ div.scrollmenu a:hover {
 }
 
 .card-view .price-tag {
-    margin-top: -13px;
-    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    font-size: 16px;
     font-weight: 700;
     text-align: center;
     color: rgb(232, 76, 79)
@@ -74,6 +126,8 @@ div.scrollmenu a:hover {
     padding: 0px 1px 1px 1px;
     border-radius: 10px;
     text-shadow: none !important;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .product-hr {
@@ -90,4 +144,14 @@ div.scrollmenu a:hover {
 
 .gap-product {
     padding-right: 1px !important;
+}
+
+.close-icon{
+    position: absolute;
+    top: 20px;
+    right: -10px;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    text-shadow: none;
+    
 }

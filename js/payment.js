@@ -37,26 +37,7 @@
     });
     card.mount("#example5-card");
 
-    /**
-     * Payment Request Element
-     */
-    var paymentRequest = stripe.paymentRequest({
-        country: "US",
-        currency: "usd",
-        total: {
-            amount: 2500,
-            label: "Total"
-        },
-        requestShipping: true,
-        shippingOptions: [
-            {
-                id: "free-shipping",
-                label: "Free shipping",
-                detail: "Arrives in 5 to 7 days",
-                amount: 0
-            }
-        ]
-    });
+    
     paymentRequest.on("token", function(result) {
         var example = document.querySelector(".example5");
         example.querySelector(".token").innerText = result.token.id;

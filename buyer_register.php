@@ -23,6 +23,7 @@
                     <a href="buyer_login.php" rel="external"><span class="linkText" >Login</span>
                     </a>
                 </p>
+            </a>
 
         </div>
 

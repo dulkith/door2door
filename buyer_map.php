@@ -24,14 +24,12 @@
 
                 <section class="store-detail-list">
                     <div role="main" id="map">
-                        <!-- map loads here... -->
                     </div>
                 </section>
 
             </div>
             <div>
                 <div class="carosol-today-deal">
-                    <!-- 2nd scrol -->
                     <div class="scrollmenu">
                         <table class="change-table">
                             <tr>

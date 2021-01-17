@@ -85,16 +85,9 @@ a:active {
     font-size: 13px !important;
     color: white;
     background-color: #001B36;
-    border-left-width: 0px !important;
-    border-right-width: 0px !important;
-    border-top-width: 0px !important;
-    border-bottom-width: 0px !important;
+    border-color: #001B36;
 }
 
-.footerBtn .ui-btn-active {
-    background-color: rgb(232, 76, 79) !important;
-    color: white !important;
-}
 
 .logo_red {
     position: relative;
@@ -412,6 +405,7 @@ div.desc {
     from {
         opacity: .4
     }
+
     to {
         opacity: 1
     }
@@ -421,6 +415,7 @@ div.desc {
     from {
         opacity: .4
     }
+
     to {
         opacity: 1
     }
@@ -429,6 +424,7 @@ div.desc {
 /* On smaller screens, decrease text size */
 
 @media only screen and (max-width: 300px) {
+
     .prev,
     .next {
         font-size: 11px
@@ -612,7 +608,8 @@ i {
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -634,7 +631,8 @@ i {
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -659,7 +657,8 @@ i {
     transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
     background-color: #717171;
 }
 
@@ -675,6 +674,7 @@ i {
     from {
         opacity: .4
     }
+
     to {
         opacity: 1
     }
@@ -684,6 +684,7 @@ i {
     from {
         opacity: .4
     }
+
     to {
         opacity: 1
     }
@@ -691,7 +692,9 @@ i {
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-    .prev, .next {
+
+    .prev,
+    .next {
         font-size: 11px
     }
 }
@@ -705,10 +708,10 @@ i {
     grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr;
     gap: 2px 15px;
     grid-template-areas:
-    "foodImage foodTtile"
-    "foodImage foodPrice"
-    "foodImage foodDelivery"
-    "foodImage addToCart";
+        "foodImage foodTtile"
+        "foodImage foodPrice"
+        "foodImage foodDelivery"
+        "foodImage addToCart";
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 10px;
@@ -716,6 +719,7 @@ i {
     background-color: #ffffff;
     border-radius: 10px;
     border: 1px solid #ffbbbb;
+    position: relative;
 }
 
 .foodImage {
@@ -753,6 +757,26 @@ i {
     height: 12px !important;
     font-size: 12px;
     text-align: center
+}
+
+
+.grid-container-favourite {
+    display: grid;
+    grid-template-columns: 0.6fr 0.9fr;
+    grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr;
+    gap: 2px 15px;
+    grid-template-areas:
+        "foodImage foodTtile"
+        "foodImage foodPrice"
+        "foodImage foodDelivery"
+        "foodImage addToCart";
+    
+    margin-bottom: 10px;
+    max-width: 350px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #ffbbbb;
+    position: relative;
 }
 
 /*****************************************************
@@ -862,7 +886,7 @@ i {
     grid-template-columns: 0.5fr 1fr;
     grid-template-rows: 0.5fr;
     gap: 0px 0px;
-    grid-template-areas:"one-profile two-profile";
+    grid-template-areas: "one-profile two-profile";
 }
 
 .grid-container-profile p {
@@ -912,11 +936,11 @@ i {
     grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 1fr;
     gap: 10px 30px;
     grid-template-areas:
-    "subTotal subTotalValue"
-    "tax taxValue"
-    "delivery deliveryValue"
-       "line line"
-    "total totalValue";
+        "subTotal subTotalValue"
+        "tax taxValue"
+        "delivery deliveryValue"
+        "line line"
+        "total totalValue";
     margin: 20px;
     padding: 20px;
     background-color: #FFEEEE;
@@ -973,4 +997,40 @@ i {
 
 .deliveryValue {
     grid-area: deliveryValue;
+}
+
+/*star rating*/
+
+
+.star {
+    color: orange;
+    font-size: 2.0rem;
+    padding: 0 0rem;
+    /* space out the stars */
+}
+
+.star::before {
+    content: '\2606';
+    /* star outline */
+    cursor: pointer;
+}
+
+.star.rated::before {
+    /* the style for a selected star */
+    content: '\2605';
+    /* filled star */
+}
+
+.stars {
+    counter-reset: rateme 0;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.star.rated {
+    counter-increment: rateme 1;
+}
+
+.stars::after {
+    content: counter(rateme) '/5';
 }

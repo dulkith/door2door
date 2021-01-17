@@ -4,7 +4,7 @@
 
     <div data-role="header" data-position="fixed" class="header-bar">
         <i class="fa fa-bars fa-2x back-icon" onclick="navOpen()"></i>
-        <i class="fa fa-chevron-left previous"></i>
+        <i class="fa fa-chevron-left previous" onclick="goBack()"></i>
         <h1 style="font-size: 20px; font-weight: 900;" class="page-detail">QR SCANNER</h1>
     </div>
 

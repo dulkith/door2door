@@ -31,14 +31,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         "datePicker" => $datePicker,
         "comment" => $comment
     );
-    // save comment
     array_push($_SESSION['comments'], $newCommentData);
 }
 
-// read comments
 $comments = $_SESSION['comments'];
 
-// Removing the redundant HTML characters if any exist.
 function test_input($data)
 {
     $data = trim($data);
@@ -62,14 +59,11 @@ function test_input($data)
         <h1 style="font-size: 20px; font-weight: 900;" class="page-detail">ITEM DETAILS</h1>
     </div>
 
-    <!-- Popup fullscreen view -->
     <div id="tshirt1" data-role="popup" class="photopopup" data-overlay-theme="a" data-corners="false"
          data-tolerance="30,15">
         <a id="closeBtnSlideshow" href="#" data-rel="back"
            class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-        <!--<a class="prev slideshowBtn" onclick="plusSlides(-1)">&#10094;</a>-->
         <img id="slideShowImage" src="assets/imagesges/favourite/Rice-Curry.png">
-        <!--<a class="next slideshowBtn" onclick="plusSlides(1)">&#10095;</a>-->
     </div>
     <div class="rwd-example prod-img-container">
         <div class="ui-block-a">
@@ -77,7 +71,6 @@ function test_input($data)
             <img src="assets/images/favourite/<?php echo $loadItem['image'] ?>" style="width:100%">
 
         </div>
-        <!--UI block A ends-->
 
         <div class="ui-block-b">
             <div class="ui-body ui-body-d">
@@ -87,7 +80,6 @@ function test_input($data)
                     <span id="favContainer">
                     <span id="favouriteIcon"><i class="fa fa-share-square"></i>&nbsp&nbsp&nbsp<i
                                 class="fa fa-heart"></i></span>
-                        <!--todo fas-> for full heart-->
                     </span>
                     <br>
                     <span id="offerDisplay">-10% Special Offer</span>
@@ -103,26 +95,22 @@ function test_input($data)
                 </div>
                 <br><br>
                 <div style="margin-top: 15px">
-                    <!--Product Name and Description-->
                     <p id="productName"><?php echo $loadItem['title'] ?></p>
 
                     <p id="descriptionDisplay"><?php echo $loadItem['description'] ?> </p>
                 </div>
 
-                <div style='text-align:center; margin-bottom: 10px; margin-top: 5px;'>
-                    <!--Rating-->
-                    <span id="ratingDisplay">4.0</span>
-                    <span id="ratingDisplayTotal">/5</span>
-                    <!--Stars for rating-->
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star "></span>
-                    <!--No of Orders-->
-                    <span id="noOfOrdersDisplay">123</span>
-                    <span id="labelOrders">Orders</span>
+                <div style='text-align:center; margin-bottom: 10px; margin-top: 5px;' class="stars" data-rating="4">
+                        <span id="noOfOrdersDisplay">123</span>
+                        <span id="labelOrders">Orders</span>
+                        <!--Stars for rating-->
+                        <span class="star">&nbsp;</span>
+        		        <span class="star">&nbsp;</span>
+        		        <span class="star">&nbsp;</span>
+        		        <span class="star">&nbsp;</span>
+        		        <span class="star">&nbsp;</span>
                 </div>
+<!--
 
                 <div id="reviewAndQAContainer" style='text-align:center;'>
                     <div style='float:left;width:36%'>
@@ -134,11 +122,11 @@ function test_input($data)
                         <span class="viewQandA" id="viewQandA">Contact Us</span>
                     </div>
                     <div style='float:right;width:31%'>
-                        <!--Display store name-->
                         <span id="labelStore"><i class="fa fa-store-alt"></i></span>
                         <span class="storeName" id="storeName">Store</span>
                     </div>
                 </div>
+-->
 
 
             </div>
@@ -177,12 +165,12 @@ function test_input($data)
             <?php } ?>
 
         </div>
-        <div class="ui-grid-a">
+        <div class="ui-grid-a" style="margin-top:50px;">
             <form data-ajax="false" method="post" action="buyer_item.php?itemId=<?php echo $_GET['itemId'] ?>">
                 <div class="ui-block-a">
                     <input type="hidden" id="name" name="name" value="John Deo"/>
                     <input type="hidden" id="datePicker" name="datePicker" value="<?php echo date('Y-m-d'); ?>"/>
-                    <input type="text" id="comment" name="comment" placeholder="Type Your Message"/>
+                    <input type="text" id="comment" name="comment" placeholder="Type Your Message"/ style="padding-right:150px; height:30px;;">
                 </div>
                 <button data-role="none" type="submit" value="Submit" class="send"><i
                             class="fa fa-paper-plane fa-lg"></i></button>
@@ -291,6 +279,39 @@ function test_input($data)
                 });
 
             });
+            
+            //star rating
+            
+            document.addEventListener('DOMContentLoaded', function(){
+            let stars = document.querySelectorAll('.star');
+            stars.forEach(function(star){
+                star.addEventListener('click', setRating); 
+            });
+            
+            let rating = parseInt(document.querySelector('.stars').getAttribute('data-rating'));
+            let target = stars[rating - 1];
+            target.dispatchEvent(new MouseEvent('click'));
+        });
+
+        function setRating(ev){
+            let span = ev.currentTarget;
+            let stars = document.querySelectorAll('.star');
+            let match = false;
+            let num = 0;
+            stars.forEach(function(star, index){
+                if(match){
+                    star.classList.remove('rated');
+                }else{
+                    star.classList.add('rated');
+                }
+                if(star === span){
+                    match = true;
+                    num = index + 1;
+                }
+            });
+            document.querySelector('.stars').setAttribute('data-rating', num);
+        }
+            
         </script>
     </div>
 

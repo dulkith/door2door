@@ -18,6 +18,7 @@
 <!---->
     <link rel="stylesheet" href="style/product.css"/>
     <script src="js/map-location.js"></script>
+    <script src="js/app.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9r6ijUGikO_fB-IkreTpfCSbRod9WOWU&callback=initMap">
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

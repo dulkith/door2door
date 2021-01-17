@@ -21,10 +21,13 @@
         You've reached level 3 now.</p>
 </div>
 
-<div class="ui-bar ui-bar-a level-button profile-button" style="border-radius:10px; font-size:24px; margin: 20px;">
-    CONTINUE
-</div>
+<a href="buyer_point.php" rel="external">
+    <div class="ui-bar ui-bar-a level-button profile-button" style="border-radius:10px; font-size:24px; margin: 20px;">
+        CONTINUE
+    </div>
+</a>
 
+<?php include 'bottom_navigation.php'; ?>
 
 <script>
     function navOpen() {

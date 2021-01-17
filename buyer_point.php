@@ -9,7 +9,7 @@
 
 <div data-role="header" data-position="fixed" class="header-bar">
     <i class="fa fa-bars fa-2x back-icon" onclick="navOpen()"></i>
-        <i class="fa fa-chevron-left previous" onclick="goBack()"></i>
+    <i class="fa fa-chevron-left previous" onclick="goBack()"></i>
     <h1 style="font-size: 20px; font-weight: 900;" class="page-detail">PROFILE</h1>
 </div>
 
@@ -23,7 +23,10 @@
         <p>No: 90/1, Pagoda Road, Nugegoda, Colombo</p>
         <p>kasunmaduwantha23@gmail.com</p>
         <p>0776543523</p>
-        <button class="logout" style="width:50%; color:#ffffff; margine-right:20px; font-size:10px;">LOGOUT</button>
+
+        <a href="buyer_login.php" rel="external">
+            <button class="logout" style="width:50%; color:#ffffff; margine-right:20px; font-size:10px;">LOGOUT</button>
+        </a>
 
     </div>
 </div>
@@ -116,11 +119,12 @@
 
 
         <div id="fragment-3">
+
             <div class="cotainer2">
                 <?php
-    $strJsonFileContents = file_get_contents("data.json");
-    $array = json_decode($strJsonFileContents, true);
-    ?>
+                $strJsonFileContents = file_get_contents("data.json");
+                $array = json_decode($strJsonFileContents, true);
+                ?>
 
                 <div>
                     <div class="carosol-today-deal">
@@ -136,47 +140,68 @@
             </div>
             <div id="foodsList" style="margin-top: 20px">
                 <?php foreach ($array as $value) { ?>
-                <div class="grid-container-favourite ">
-                    <i class="fa fa-times-circle fa-lg close-icon" style="color:#E84C4F;"></i>
-                    <div class="foodImage" style="width:120px;">
-                        <a href="" data-rel="popup" data-position-to="window">
-                            <img src="assets/images/favourite/<?php echo $value['image'] ?>" style="width:80%">
+                    <div class="grid-container-favourite ">
+                        <i class="fa fa-times-circle fa-lg close-icon" style="color:#E84C4F;"></i>
+                        <div class="foodImage" style="width:120px;">
+                            <a href="" data-rel="popup" data-position-to="window">
+                                <img src="assets/images/favourite/<?php echo $value['image'] ?>" style="width:80%">
+                            </a>
+                        </div>
+                        <div class="foodTitle">
+                            <h5><?php echo $value['title'] ?></h5>
+                            <p style="font-size: 9px; margin-top: -20px">White Rice, Potato, Soya, Papadam</p>
+                        </div>
+                        <div class="foodPrice" style="margin-top:-10px; margin-bottom:10px;"><span
+                                    style="font-size: 12px; font-weight: 900; ">Rs <?php echo $value['price'] ?></span>
+                        </div>
+
+
+                        <a href="buyer_cart.php" rel="external">
+                            <div class="ui-bar ui-bar-a profile-button"
+                                 style="border-radius:10px; font-size:12px; margin-right:10px; margin-bottom:4px;">ADD
+                                TO CART
+                            </div>
+                        </a>
+
+                        <a id="prodPromoCode" href="#promopop" onclick="" data-rel="popup" data-transition="pop">
+                            <div class="ui-bar ui-bar-a profile-button"
+                                 style="border-radius:10px; font-size:12px; margin-right:10px; margin-bottom:10px;">
+                                SHARE
+                            </div>
                         </a>
                     </div>
-                    <div class="foodTitle">
-                        <h5><?php echo $value['title'] ?></h5>
-                        <p style="font-size: 9px; margin-top: -20px">White Rice, Potato, Soya, Papadam</p>
-                    </div>
-                    <div class="foodPrice" style="margin-top:-10px; margin-bottom:10px;"><span style="font-size: 12px; font-weight: 900; ">Rs <?php echo $value['price'] ?></span></div>
-
-
-                    <a href="buyer_cart.php" rel="external">
-                        <div class="ui-bar ui-bar-a profile-button" style="border-radius:10px; font-size:12px; margin-right:10px; margin-bottom:4px;">ADD TO CART</div>
-                    </a>
-
-                    <a href="buyer_checkout.php" rel="external">
-                        <div class="ui-bar ui-bar-a profile-button" style="border-radius:10px; font-size:12px; margin-right:10px; margin-bottom:10px;">SHARE
-                        </div>
-                    </a>
-                </div>
                 <?php } ?>
+
             </div>
 
         </div>
     </div>
 </div>
+
+
+<div id="promopop" data-role="popup" data-dialog="true" data-transition="pop" data-position-to="window">
+
+    <div data-role="header" data-theme="b">
+    </div>
+
+    <label for="popupBasic">Share by Email:</label>
+    <input type="text" name="name" id="promoInput" value="">
+
+    <a href="" data-role="button" data-inline="true" data-rel="back"><i class="fa fa-share"></i> Share</a>
+
+</div>
 <br>
 
 <script>
-            function navOpen() {
-                document.getElementById("sideNavigation").style.width = "250px";
-            }
+    function navOpen() {
+        document.getElementById("sideNavigation").style.width = "250px";
+    }
 
-            function navClose() {
-                document.getElementById("sideNavigation").style.width = "0";
-            }
+    function navClose() {
+        document.getElementById("sideNavigation").style.width = "0";
+    }
 </script>
 
-  <?php include 'bottom_navigation.php'; ?>
+<?php include 'bottom_navigation.php'; ?>
 
 <?php include 'footer.php'; ?>

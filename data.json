@@ -1,0 +1,58 @@
+[
+  {
+    "id":1,
+    "title":"Rice And Curry",
+    "description":"White Rice, Potato, Soya, Papadam",
+    "price":"250.00",
+    "image": "Rice-Curry.png"
+  },
+  {
+    "id":2,
+    "title":"String Hoppers",
+    "description":"White and Red String Hoppers",
+    "price":"80.00",
+    "image": "String-Hoppers.jpg"
+  },
+  {
+    "id":3,
+    "title":"Egg Hoppers",
+    "description":"White egg hoppers",
+    "price":"60.00",
+    "image": "Egg-Hoppers.jpg"
+  },
+  {
+    "id":4,
+    "title":"Chicken Fried Rice",
+    "description":"Chicken with Rice Mix",
+    "price":"350.00",
+    "image": "curry.png"
+  },
+  {
+    "id":5,
+    "title":"Strawberry Cheesecake",
+    "description":"Strawberry and Cheese",
+    "price":"350.00",
+    "image": "Strawberry-Cheesecake.jpg"
+  },
+  {
+    "id":6,
+    "title":"Fish Curry",
+    "description":"Fish",
+    "price":"150.00",
+    "image": "Fish-curry.jpg"
+  },
+  {
+    "id":7,
+    "title":"fruit Cake",
+    "description":"Mix Fruit",
+    "price":"90.00",
+    "image": "fruit-cake.jpg"
+  },
+  {
+    "id":8,
+    "title":"Fish Curry",
+    "description":"Sea Crabs",
+    "price":"150.00",
+    "image": "crab-curry.jpg"
+  }
+]

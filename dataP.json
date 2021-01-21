@@ -1,0 +1,72 @@
+[
+  {
+    "id": 3,
+    "title": "Egg Hoppers",
+    "description": "White egg hoppers",
+    "price": "60.00",
+    "image": "Egg-Hoppers.jpg"
+  },
+  {
+    "id": 2,
+    "title": "String Hoppers",
+    "description": "White and Red String Hoppers",
+    "price": "80.00",
+    "image": "String-Hoppers.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Fruit Cake with Butter",
+    "description": "Mix Fruit",
+    "price": "90.00",
+    "image": "fruit-cake.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Fish Curry",
+    "description": "Fish",
+    "price": "150.00",
+    "image": "Fish-curry.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Sea Foods Curry",
+    "description": "Sea Crabs, fish and more...",
+    "price": "200.00",
+    "image": "crab-curry.jpg"
+  },
+  {
+    "id": 1,
+    "title": "Rice And Curry",
+    "description": "White Rice, Potato, Soya, Papadam",
+    "price": "250.00",
+    "image": "Rice-Curry.png"
+  },
+  {
+    "id": 4,
+    "title": "Chicken Fried Rice",
+    "description": "Chicken with Rice Mix",
+    "price": "400.00",
+    "image": "curry.png"
+  },
+  {
+    "id": 10,
+    "title": "Burgers",
+    "description": "Scrum-Delicious burgers",
+    "price": "470.00",
+    "image": "scrum-delicious-burgers.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Strawberry Cheesecake",
+    "description": "Strawberry and Cheese",
+    "price": "1600.00",
+    "image": "Strawberry-Cheesecake.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Pizza",
+    "description": "Cheese Pizza",
+    "price": "800.00",
+    "image": "53110049.gif"
+  }
+]

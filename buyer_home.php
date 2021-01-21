@@ -5,6 +5,7 @@
         <img class="logo_white_login" src=" images/logo_white.png" alt="logo "><br>
     </div>
     <?php include 'menu.php'; ?>
+    <?php include 'ipadmenu.php'; ?>
 </div>
 
 <div data-role="header" data-position="fixed" class="header-bar">

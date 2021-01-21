@@ -1,4 +1,14 @@
-<?php include 'header.php'; ?>
+<?php include 'header.php';
+//$_SESSION['points'] = 0;
+$points = $_SESSION['points'];
+if($points >= 0){
+    $_SESSION['points'] = $points - 10;
+} else {
+    /* Redirect browser */
+    header("Location: http://localhost/door2door/buyer_point.php");
+    exit();
+}
+?>
 
 <div id="sideNavigation" class="sideNavigation" onclick="navClose()">
     <div class="logo">

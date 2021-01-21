@@ -34,6 +34,12 @@ if (!isset($_SESSION['favourite']) || $_SESSION['favourite'] == ''){
 if (!isset($_SESSION['comments']) || $_SESSION['comments'] == ''){
     $_SESSION['comments']=array();
 }
+if (!isset($_SESSION['cart']) || $_SESSION['cart'] == ''){
+    $_SESSION['cart']=array();
+}
+if (!isset($_SESSION['points']) || $_SESSION['points'] == ''){
+    $_SESSION['points']=0;
+}
 ?>
 
 <body>

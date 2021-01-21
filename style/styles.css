@@ -79,6 +79,7 @@ a:active {
     text-shadow: none;
 }
 
+
 .footerBtn .ui-btn {
     line-height: 1.7 !important;
     font-family: sans-serif;
@@ -597,6 +598,9 @@ i {
     font-size: 26px;
     color: #ffffff;
 }
+.helpPage{
+    margin-top: 100px;
+}
 
 .helpPage span {
     font-size: 14px;
@@ -728,15 +732,15 @@ i {
         "foodImage foodPrice"
         "foodImage foodDelivery"
         "foodImage addToCart";
-    margin-left: 20px;
-    margin-right: 20px;
+
     margin-bottom: 10px;
-    max-width: 350px;
     background-color: #ffffff;
     border-radius: 10px;
     border: 1px solid #ffbbbb;
     position: relative;
 }
+
+
 
 .foodImage {
     grid-area: foodImage;
@@ -788,7 +792,6 @@ i {
         "foodImage addToCart";
 
     margin-bottom: 10px;
-    max-width: 350px;
     background-color: #ffffff;
     border-radius: 10px;
     border: 1px solid #ffbbbb;
@@ -895,6 +898,8 @@ i {
     border-width: 1px;
     border-radius: 10px;
     border-color: #E84C4F;
+    margin-left: -25px;
+    margin-right: -25px;
 }
 
 .grid-container-profile {
@@ -957,8 +962,8 @@ i {
         "delivery deliveryValue"
         "line line"
         "total totalValue";
-    margin: 20px;
     padding: 20px;
+    margin-top: 20px;
     background-color: #FFEEEE;
     font-size: 12px;
 }
@@ -1049,4 +1054,107 @@ i {
 
 .stars::after {
     content: counter(rateme) '/5';
+}
+.sendicon{
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: #E84C4F;
+    height: 40px;
+    width: 45px;
+}
+
+
+@media screen and (min-width: 500px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 250px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #E84C4F;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        overflow-x: hidden;
+
+    }
+
+
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    .sidenav span {
+        font-weight: 300;
+        text-shadow: none;
+    }
+
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    .cotainer2 {
+        margin-left: 270px;
+        font-size: 28px;
+        padding: 0px 10px;
+    }
+    
+    .contenr3 {
+        margin-left: 250px;
+        font-size: 28px;
+        padding: 0px 10px;
+    }
+    
+    .send {
+    border-radius: 10px;
+    margin-top: 20px;
+    background-color: #E84C4F;
+    height: 55px;
+    width: 60px;
+}
+    .light .name{
+        font-size: 18px;
+    }
+    .light .comment{
+        font-size: 18px;
+    }
+    
+    .darker .name1{
+        font-size: 18px;
+    }
+    .darker .comment{
+        font-size: 18px;
+    }
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 400px) {
+    .sidenav {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 1024px) {
+    .sidenav {
+        display: block;
+    }
 }

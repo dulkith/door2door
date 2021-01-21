@@ -8,9 +8,18 @@
         <h1 style="font-size: 20px; font-weight: 900;" class="page-detail">QR SCANNER</h1>
     </div>
 
+ <div class="cotainer2">
+            <div id="sideNavigation" class="sideNavigation" onclick="navClose()">
+                <div class="logo">
+                    <img class="logo_white_login" src=" images/logo_white.png" alt="logo "><br>
+                </div>
+                <?php include 'menu.php'; ?>
+                <?php include 'ipadmenu.php'; ?>
+            </div>
 
 
-    <div style="width: 375px" id="reader">
+
+    <div style="margin-top:20px;" id="reader">
     </div>
     <br>
     <br>
@@ -132,6 +141,6 @@
 
     </script>
 
-
+ <?php include 'bottom_navigation.php'; ?>
 
     <?php include 'footer.php'; ?>

@@ -5,7 +5,9 @@
         <img class="logo_white_login" src=" images/logo_white.png" alt="logo "><br>
     </div>
     <?php include 'menu.php'; ?>
+    <?php include 'ipadmenu.php'; ?>
 </div>
+
 
 <div data-role="header" data-position="fixed" class="header-bar">
     <i class="fa fa-bars fa-2x back-icon" onclick="navOpen()"></i>
@@ -16,7 +18,7 @@
 <div class="cotainer2">
 
     <input type="text" class="ui-input-text ui-body-a" name="" id="searchinput1"
-           placeholder=" Search Near by Food Items..." value="" data-type="search"
+           placeholder=" Search Near by Food Items..." value="" data-type="search">
     <div data-role="fieldcontain">
 
         <div class="store-detail-container">
@@ -28,7 +30,8 @@
                 </section>
 
             </div>
-            <div>
+            <br>
+        
                 <div class="carosol-today-deal">
                     <div class="scrollmenu">
                         <table class="change-table">

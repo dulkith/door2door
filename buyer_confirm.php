@@ -1,4 +1,9 @@
-<?php include 'header.php'; ?>
+<?php include 'header.php';
+
+$_SESSION['cart'] = [];
+$_SESSION['points'] = $_SESSION['points'] + 10;
+
+?>
 
 <div id="sideNavigation" class="sideNavigation" onclick="navClose()">
     <div class="logo">
@@ -29,7 +34,7 @@
 <br>
 
 <div class="" style="text-align:center;">
-    <h2>You earn 15 points</h2>
+    <h2>You earn 10 points</h2>
 </div>
 
 

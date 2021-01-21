@@ -208,7 +208,7 @@ $points = $_SESSION['points'];
                     <a href="?addFavouriteFood=<?php echo $value['id'] ?>" rel="external"><button data-role="none" type="submit" value="Submit" class="sendicon"><i class="fa fa-heart" style="color:white;"></i></button></a>
                     <a href="buyer_item.php?itemId=<?php echo $value['id'] ?>" rel="external"><button data-role="none" type="submit" value="Submit" class="sendicon"><i class="fa fa-shopping-cart" style="color:white;"></i></button></a>
 -->
-                                <a href="?addFavouriteFood=<?php echo $value['id'] ?>" rel="external">
+                                <a href="buyer_cart.php?itemId=<?php echo $value['id'] ?>" rel="external">
                                     <div class="ui-bar ui-bar-a profile-button"
                                          style="border-radius:10px; font-size:12px; margin-right:10px; margin-bottom:4px; max-width:200px;">
                                         <i class="fa fa-cart-plus"></i> ADD TO CART
@@ -238,9 +238,8 @@ $points = $_SESSION['points'];
     <label style="margin: 5px; padding: 5px;" for="popupBasic">Enter Email Address:</label>
     <input style="margin: 5px; padding: 5px;" type="text" name="name" id="promoInput" value="">
 
-    <a style="text-align: center" href="" data-role="button" data-inline="true" data-rel="back"><i
+    <a href="?mail=true" style="text-align: center"  data-role="button" data-inline="true" data-rel="back"><i
                 class="fa fa-share"></i> Share</a>
-
 </div>
 <br>
 

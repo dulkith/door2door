@@ -91,7 +91,7 @@ function test_input($data)
                             </a>
                         </div>
 
-                        <a href="?addFavouriteFood=<?php echo $loadItem['id'] ?>" rel="external">
+                        <a href="buyer_point.php?addFavouriteFood=<?php echo $loadItem['id'] ?>" rel="external">
                             <div style='float:right;width:50%'>
                                 <button id="btnBuy" class="btnCartAndBuy ui-btn ui-btn-inline"><i class="fa fa-heart"></i> FAVOURITE</button>
                             </div>

@@ -1,4 +1,14 @@
-<?php include 'header.php'; ?>
+<?php include 'header.php';
+//$_SESSION['points'] = 0;
+$points = $_SESSION['points'];
+if($points >= 0){
+    $_SESSION['points'] = $points - 10;
+} else {
+    /* Redirect browser */
+    header("Location: http://localhost/door2door/buyer_point.php");
+    exit();
+}
+?>
 
 <div id="sideNavigation" class="sideNavigation" onclick="navClose()">
     <div class="logo">
@@ -21,10 +31,13 @@
         You've reached level 3 now.</p>
 </div>
 
-<div class="ui-bar ui-bar-a level-button profile-button" style="border-radius:10px; font-size:24px; margin: 20px;">
-    CONTINUE
-</div>
+<a href="buyer_point.php" rel="external">
+    <div class="ui-bar ui-bar-a level-button profile-button" style="border-radius:10px; font-size:24px; margin: 20px;">
+        CONTINUE
+    </div>
+</a>
 
+<?php include 'bottom_navigation.php'; ?>
 
 <script>
     function navOpen() {

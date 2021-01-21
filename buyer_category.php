@@ -5,6 +5,7 @@
             <img class="logo_white_login" src=" images/logo_white.png" alt="logo "><br>
         </div>
         <?php include 'menu.php'; ?>
+        <?php include 'ipadmenu.php'; ?>
     </div>
 
     <div data-role="header" data-position="fixed" class="header-bar">
@@ -16,7 +17,7 @@
     <div class="cotainer2">
 
     <input type="text" class="ui-input-text ui-body-a" name="" id="searchinput1" placeholder=" Search Food Items..."
-           value="" data-type="search"
+           value="" data-type="search">
     <div data-role="fieldcontain">
 
         <div>

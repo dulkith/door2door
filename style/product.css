@@ -27,87 +27,6 @@
 	border-top-width: 0;
 }
 
-/* 1st breakpoint - A in top, B in bottom*/
-@media all and (min-width: 20em) {
-	.rwd-example {
-		overflow: hidden; /* Use this or a "clearfix" to give the container height */
-	}
-
-	.rwd-example .ui-block-b {
-		float: left;
-	}
-
-	.rwd-example .ui-block-b p {
-		font-size: .8em;
-	}
-
-	.rwd-example > div + div .ui-body {
-		border-top-width: 1px;
-	}
-
-	.rwd-example > div:first-child .ui-body {
-		border-bottom-width: 0;
-	}
-
-	.rwd-example > div:last-child .ui-body {
-		border-left-width: 0;
-	}
-
-	.product-image {
-		width: 100%;
-	}
-}
-
-/* 2nd breakpoint - Float, 60,40 */
-@media all and (min-width: 40em) {
-	.rwd-example .ui-body {
-		/*min-height: 18em;*/
-	}
-
-	.rwd-example .ui-block-a {
-		float: left;
-		width: 50%;
-	}
-
-	.rwd-example .ui-block-b {
-		float: left;
-		width: 50%;
-	}
-
-	.rwd-example > div:first-child .ui-body {
-		border-bottom-width: 1px;
-	}
-
-	.rwd-example > div + div .ui-body {
-		border-left-width: 0;
-	}
-
-	.product-image {
-		width: 100%;
-	}
-}
-
-/* 3rd breakpoint - Bump up font size at very wide screens */
-@media all and (min-width: 75em) {
-	.rwd-example .ui-body {
-		font-size: 125%;
-	}
-
-	.rwd-example .ui-block-a {
-		float: left;
-		width: 50%;
-	}
-
-	.rwd-example .ui-block-b {
-		float: left;
-		width: 50%;
-	}
-
-	.product-image {
-		width: 100%;
-	}
-}
-
 .suggestion-container {
 	padding: 0 20px 10px 20px;
 	background-color: rgb(255, 255, 255);
@@ -159,14 +78,14 @@
 #priceUnit {
 	color: #1b1b1b;
 	font-weight: 500;
-	font-size: x-large;
+	font-size: 24px;
 	margin-right: 10px;
 }
 
 #priceDisplay {
 	color: #1b1b1b;
-	font-weight: 500;
-	font-size: x-large;
+	font-weight: 900;
+	font-size:23px;
 }
 
 #offerDisplay {
@@ -249,7 +168,6 @@
 	color: whitesmoke !important;
 	background-color: rgb(232, 76, 79) !important;
 	border-color: rgb(232, 76, 79) !important;
-	width: 80% !important;
 	text-shadow: none !important;
 	border-radius: 20px;
 }

@@ -145,7 +145,7 @@
         <div style='float:left;width:70%' class="ui-body ui-body-d">
 
             <h6 style="color: #010201;font-weight: bold; font-size: 30px">Total</h6>
-            <h4 id="PayAmount" style="color: #2f0b0b;font-weight: bold">260.00</h4>
+            <h4 id="PayAmount" style="color: #2f0b0b;font-weight: bold">LKR: 260.00</h4>
 
         </div>
         <div style='float:right;width:30%; height: 100px; text-align: center'>
@@ -241,7 +241,7 @@
         }
 
         function GotoAR() {
-            location.href = "PaymentPopup.html";
+            location.href = "PaymentPopup.php";
         }
 
         function goToProduct() {
@@ -308,7 +308,7 @@
                                 "user_id": 2,
                                 "product_id": 1,
                                 "total_amount": payAmount,
-                                "order_time": "2019-10-11 10:45:14",
+                                "order_time": "2021-01-11 10:45:14",
                                 "order_status": "paid",
                                 "quantity": 1,
                                 "store_id": 2
